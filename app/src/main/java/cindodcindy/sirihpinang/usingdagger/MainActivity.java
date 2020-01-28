@@ -33,13 +33,15 @@ public class MainActivity extends AppCompatActivity {
         textView_dagger=findViewById(R.id.tv_id);
         button_dagger=findViewById(R.id.btn_id);
 
-        //.inject(this);
+        DaggerBattleComponent.create().inject(this);
 
         button_dagger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String getInject=
+
+                String getReport = lightKnight.setEquiment() + " dan " + darkknight.setEquimpent();
+                textView_dagger.setText(getReport);
 
 
 
